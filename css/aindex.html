@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冷奇识——一个富含科学知识的网站</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header class="sc clearfix">
+        <div class="fl head1">
+            <div id="date">{{date}}</div>
+            <div id="time">{{time}}</div>
+            <div><a href="html/colorset.html">设置</a></div>
+        </div>
+            <div title="我不是牛顿摆" style="width: 40px;display: inline-block;position: absolute;right: 50%;">
+            <span class="sc ndbmove2" style="position: relative;"></span>
+            <span class="sc"></span>
+            <span class="sc"></span>
+            <span class="sc"></span>
+            <span class="sc"></span>
+            </div>
+            <div title="我不是牛顿摆" style="width: 40px;display: inline-block;position: absolute;left: 50%;">
+            <span class="sc"></span>
+            <span class="sc"></span>
+            <span class="sc"></span>
+            <!-- <span class="sc"></span> -->
+            <span class="sc"></span>
+            <span class="sc ndbmove1" style="position: relative;"></span>
+            </div>
+        <div class="fr head2">
+            <div>冷奇识（新版）</div>
+            <div>知识网站  </div>
+        </div>
+    </header>
+    <script>
+        var date_element=document.getElementById("date")
+        var date_for_element=new Date()
+        date_element.innerHTML=date_for_element.getFullYear()+"."+date_for_element.getMonth()+"."+date_for_element.getDate()
+        var time_element=document.getElementById("time")
+        time_element.innerHTML=date_for_element.getHours()+":"+date_for_element.getMinutes()
+    </script>
+    <!-- header部分结束 -->
+
+
+
+    <!-- banner部分开始 -->
+    <section>
+        <img src="upload/banner1.jpg" alt="？？？？？？？？？">
+        <img src="upload/banner2.jpg" alt="？？？？？？？？？">
+        <img src="upload/banner3.jpg" alt="？？？？？？？？？">
+        <img src="upload/banner4.jpg" alt="？？？？？？？？？">
+    </section>
+</body>
+</html>

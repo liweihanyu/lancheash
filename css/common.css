@@ -1,0 +1,11 @@
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+a,.sc{
+    background-color: #8effff;
+    color: #00005c;
+    border-color: #00005c;
+}
