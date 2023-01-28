@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冷奇识——一个富含科学知识的网站</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.css">  
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">    
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.js"> </script>  
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js.map"> </script>
+    <script type="module">
+        import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js'
+    </script>
+
+</head>
+<body>
+    <header class="sc clearfix fr">
+        <div class="fl head1">
+            <div id="date">{{date}}</div>
+            <div id="time">{{time}}</div>
+            <div><a href="html/colorset.html">设置</a></div>
+        </div>
+            <div title="我不是牛顿摆" style="width: 40px;display: inline-block;position: absolute;right: 50%;">
+            <span class="sc ndbmove2" style="position: relative;"></span>
+            <span class="sc"></span>
+            <span class="sc"></span>
+            <span class="sc"></span>
+            <span class="sc"></span>
+            </div>
+            <div title="我不是牛顿摆" style="width: 40px;display: inline-block;position: absolute;left: 50%;">
+            <span class="sc"></span>
+            <span class="sc"></span>
+            <span class="sc"></span>
+            <!-- <span class="sc"></span> -->
+            <span class="sc"></span>
+            <span class="sc ndbmove1" style="position: relative;"></span>
+            </div>
+        <div class="fr head2">
+            <div>冷奇识（新版）</div>
+            <div><a href="html/shoucang.html">收藏夹</a></div>
+        </div>
+    </header>
+    <script>
+        var date_element=document.getElementById("date")
+        var date_for_element=new Date()
+        date_element.innerHTML=date_for_element.getFullYear()+"."+date_for_element.getMonth()+"."+date_for_element.getDate()
+        var time_element=document.getElementById("time")
+        time_element.innerHTML=date_for_element.getHours()+":"+date_for_element.getMinutes()
+    </script>
+    <!-- header部分结束 -->
+
+    <!-- banner部分开始 -->
+    <div style="display: block;height: 100px;"></div>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+          <img src="upload/banner1.jpg" class="swiper-slide">
+          <img src="upload/banner2.jpg" class="swiper-slide">
+          <img src="upload/banner3.jpg" class="swiper-slide">
+          <img src="upload/banner4.jpg" class="swiper-slide">
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+      <script>
+      var mySwiper = new Swiper('.swiper', {
+          loop:true,
+          autoplay: true,
+          effect:"slide",
+          navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+          pagination: {
+          el: '.swiper-pagination',
+          clickable:true,
+        },
+      })
+      new Swiper('.swiper')
+      var mySwiper = document.querySelector('.swiper').swiper
+      mySwiper.slideNext();
+      </script>
+</body>
+</html>
